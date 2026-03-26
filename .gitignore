@@ -1,0 +1,34 @@
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+*.usertask
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.sln.ide/
+
+# Rider
+.idea/
+
+# Cursor / VSCode
+.vscode/
+
+# NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+packages/
+.nuget/
+
+# .NET publish output
+publish/
+
+# OS generated
+.DS_Store
+Thumbs.db
