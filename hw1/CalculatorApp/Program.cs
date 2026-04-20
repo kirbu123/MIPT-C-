@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Calculator
 {
@@ -13,7 +13,7 @@ namespace Calculator
             {
                 try
                 {
-                    Console.WriteLine("\nВведите первое число:");
+                    Console.WriteLine(Environment.NewLine + "Введите первое число:");
                     string input1 = Console.ReadLine();
                     
                     if (input1.ToLower() == "q")
