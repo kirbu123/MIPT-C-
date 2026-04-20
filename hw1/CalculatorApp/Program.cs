@@ -14,31 +14,54 @@ namespace Calculator
                 try
                 {
                     Console.WriteLine(Environment.NewLine + "Введите первое число:");
-                    string input1 = Console.ReadLine();
+                    string? input1 = Console.ReadLine();
                     
-                    if (input1.ToLower() == "q")
+                    if (string.IsNullOrWhiteSpace(input1))
+                    {
+                        Console.WriteLine("Ошибка: пустой ввод. Введите число или 'q' для выхода.");
+                        continue;
+                    }
+                    
+                    if (input1.Trim().ToLowerInvariant() == "q")
                         break;
                     
-                    double num1 = Convert.ToDouble(input1);
+                    if (!double.TryParse(input1, out double num1))
+                    {
+                        Console.WriteLine("Ошибка: введите корректное число!");
+                        continue;
+                    }
                     
                     Console.WriteLine("Введите второе число:");
-                    string input2 = Console.ReadLine();
+                    string? input2 = Console.ReadLine();
                     
-                    if (input2.ToLower() == "q")
+                    if (string.IsNullOrWhiteSpace(input2))
+                    {
+                        Console.WriteLine("Ошибка: пустой ввод. Введите число или 'q' для выхода.");
+                        continue;
+                    }
+                    
+                    if (input2.Trim().ToLowerInvariant() == "q")
                         break;
                     
                     double num2 = Convert.ToDouble(input2);
                     
                     Console.WriteLine("Выберите операцию (+, -, *, /):");
-                    string operation = Console.ReadLine();
+                    string? operation = Console.ReadLine();
                     
-                    if (operation.ToLower() == "q")
+                    if (string.IsNullOrWhiteSpace(operation))
+                    {
+                        Console.WriteLine("Ошибка: пустой ввод. Введите операцию или 'q' для выхода.");
+                        continue;
+                    }
+                    
+                    if (operation.Trim().ToLowerInvariant() == "q")
                         break;
                     
+                    string op = operation.Trim();
                     double result = 0;
                     bool validOperation = true;
                     
-                    switch (operation)
+                    switch (op)
                     {
                         case "+":
                             result = num1 + num2;
@@ -68,7 +91,7 @@ namespace Calculator
                     
                     if (validOperation)
                     {
-                        Console.WriteLine($"Результат: {num1} {operation} {num2} = {result}");
+                        Console.WriteLine($"Результат: {num1} {op} {num2} = {result}");
                     }
                 }
                 catch (FormatException)

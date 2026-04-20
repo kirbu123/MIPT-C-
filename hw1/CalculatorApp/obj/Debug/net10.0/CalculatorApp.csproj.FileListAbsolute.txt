@@ -12,3 +12,4 @@
 /home/bunin-kirill/Desktop/BOTAY/MIPT-C#/hw1/CalculatorApp/obj/Debug/net10.0/CalculatorApp.pdb
 /home/bunin-kirill/Desktop/BOTAY/MIPT-C#/hw1/CalculatorApp/obj/Debug/net10.0/CalculatorApp.genruntimeconfig.cache
 /home/bunin-kirill/Desktop/BOTAY/MIPT-C#/hw1/CalculatorApp/obj/Debug/net10.0/ref/CalculatorApp.dll
+/home/bunin-kirill/Desktop/BOTAY/MIPT-C#/hw1/CalculatorApp/obj/Debug/net10.0/CalculatorApp.sourcelink.json
